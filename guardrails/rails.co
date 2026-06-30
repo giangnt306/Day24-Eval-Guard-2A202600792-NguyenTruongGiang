@@ -51,13 +51,21 @@ define flow check pii request
   bot refuse pii request
 
 
+define bot general response
+  "Chào bạn, tôi có thể giúp gì cho bạn?"
+  "Nhân viên được nghỉ phép 12 ngày phép năm."
+  "Bạn có thể liên hệ bộ phận HR để biết thêm chi tiết."
+  "Chính sách bảo hiểm của công ty gồm..."
+  "Tôi rất vui lòng hỗ trợ bạn giải đáp các thắc mắc về chính sách nhân sự."
+
+
 # ── Output Rails ──────────────────────────────────────────────────────────────
 
 define bot provide sensitive output
-  "CCCD của nhân viên là"
-  "số điện thoại cá nhân của"
-  "mật khẩu hệ thống là"
-  "thông tin bí mật"
+  "CCCD của nhân viên là 012345678901"
+  "số điện thoại cá nhân của nhân viên A là 0987654321"
+  "mật khẩu hệ thống là admin_secret_pass"
+  "đây là thông tin bí mật và nhạy cảm: 123456"
 
 define flow check sensitive output
   bot provide sensitive output
